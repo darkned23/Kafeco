@@ -10,6 +10,7 @@ import java.util.Date;
  * @author darkn
  */
 public class Reservation {
+    private int id;
     private String name;
     private String email;
     private Date date;
@@ -19,12 +20,17 @@ public class Reservation {
     public Reservation() {
     }
 
-    public Reservation(String name, String email, Date date, Duration duration, int numberPerson) {
+    public Reservation(int id, String name, String email, Date date, Duration duration, int numberPerson) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.date = date;
         this.duration = duration;
         this.numberPerson = numberPerson;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {
